@@ -1,0 +1,73 @@
+/*
+ * css by cesar
+ */
+
+
+.vbox {
+   -fx-border-color:teal;
+   -fx-background-color:azure;
+   }
+.botones{
+    -fx-border-color:teal;
+    -fx-border-radius:25%;
+    -fx-background-radius:25%;
+    -fx-background-color:white;
+   
+}
+.campos{
+    -fx-border-color:teal;
+    -fx-border-radius:25%;
+    -fx-background-radius:25%;
+    -fx-background-color:white;
+  }
+.letras{
+    -fx-text-fill:teal;
+    }
+.amogus{
+    -fx-background-color:azure;   
+}
+
+.date-picker {
+    -fx-background-radius: 10 10 10 10;
+}
+.date-picker > .text-field {
+    -fx-background-radius: 10 0 0 10;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-radius: 0 10 10 0;
+    -fx-background-color: white;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: teal;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 4px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:armed {
+    -fx-background-color: teal;
+    -fx-background-image: null;
+}
+.radio-button -radio:determinate {
+    -fx-background-color: teal;
+    -fx-background-image: null;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+}
+
+#lv .list-cell {
+    -fx-alignment: center;
+}

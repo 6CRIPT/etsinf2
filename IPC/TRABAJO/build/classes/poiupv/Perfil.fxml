@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="426.0" styleClass="vbox" stylesheets="@plantillaejercicio.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poiupv.PerfilController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="atras" minHeight="27.0" minWidth="48.0" mnemonicParsing="false" onAction="#btVolverAC" prefHeight="27.0" prefWidth="48.0" styleClass="botones" stylesheets="@plantillaejercicio.css" text="Atrás">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Button>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="253.0">
+               <children>
+                  <Label prefHeight="43.0" prefWidth="83.0" styleClass="letras" stylesheets="@plantillaejercicio.css" text="Perfil" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="113.0" prefWidth="539.0">
+         <children>
+            <ImageView fx:id="imagen" fitHeight="189.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="189.0" prefWidth="96.0">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <children>
+                  <Button fx:id="btImgCambiar" mnemonicParsing="false" onAction="#btImgCambiarAC" styleClass="botones" stylesheets="@plantillaejercicio.css" text="Editar" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="172.0" prefWidth="424.0">
+         <children>
+            <VBox prefHeight="182.0" prefWidth="392.0">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="165.0" prefWidth="445.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="173.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="219.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="42.0" minHeight="4.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="42.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="139.0">
+                           <children>
+                              <Label styleClass="letras" stylesheets="@plantillaejercicio.css" text="Usuario" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="La cantidad total de sesiones." />
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="120.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label styleClass="letras" stylesheets="@plantillaejercicio.css" text="Correo Electrónico" textAlignment="CENTER">
+                                 <tooltip>
+                                    <Tooltip text="La cantidad total de sesiones." />
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1">
+                           <children>
+                              <TextField fx:id="nomUsuario" alignment="CENTER" editable="false" maxWidth="160.0" prefHeight="25.0" prefWidth="160.0" styleClass="campos" stylesheets="@plantillaejercicio.css">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="El usuario no se puede editar." />
+                                 </tooltip>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField fx:id="correoActual" alignment="CENTER" editable="false" maxWidth="160.0" prefHeight="25.0" prefWidth="160.0" styleClass="campos" stylesheets="@plantillaejercicio.css" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="120.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label styleClass="letras" stylesheets="@plantillaejercicio.css" text="Contraseña" textAlignment="CENTER">
+                                 <tooltip>
+                                    <Tooltip text="La cantidad total de sesiones." />
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField fx:id="contrasenaActual" alignment="CENTER" editable="false" maxWidth="160.0" prefHeight="25.0" prefWidth="160.0" styleClass="campos" stylesheets="@plantillaejercicio.css" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="139.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label styleClass="letras" stylesheets="@plantillaejercicio.css" text="Fecha de Nacimiento" textAlignment="CENTER">
+                                 <tooltip>
+                                    <Tooltip text="La cantidad total de sesiones." />
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="9.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <DatePicker fx:id="fechaActual" editable="false" prefHeight="27.0" prefWidth="161.0" stylesheets="@plantillaejercicio.css">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="date-picker" />
+                                    <String fx:value="botones" />
+                                 </styleClass>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="36.0" prefWidth="424.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="bteditar" alignment="CENTER" mnemonicParsing="false" onAction="#bteditarAC" prefHeight="27.0" prefWidth="62.0" styleClass="botones" stylesheets="@plantillaejercicio.css" text="Editar">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btGuardar" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#btGuardarAC" styleClass="botones" stylesheets="@plantillaejercicio.css" text="Guardar">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="49.0" prefWidth="554.0">
+         <children>
+            <Label fx:id="error" alignment="CENTER" prefHeight="37.0" prefWidth="554.0" textFill="#ef1d1d" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
