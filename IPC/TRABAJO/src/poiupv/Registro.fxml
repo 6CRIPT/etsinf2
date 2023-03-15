@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="826.0" prefWidth="600.0" styleClass="vbox" stylesheets="@plantillaejercicio.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poiupv.RegistroController">
+   <children>
+      <HBox prefHeight="33.0" prefWidth="599.0">
+         <children>
+            <Button fx:id="botonAtras" mnemonicParsing="false" onAction="#atrasAC" styleClass="botones" stylesheets="@plantillaejercicio.css" text="Atras">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <VBox prefHeight="723.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label styleClass="letras" stylesheets="@plantillaejercicio.css" text="Nuevo Usuario">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label styleClass="letras" text="Usuario *">
+                     <VBox.margin>
+                        <Insets left="100.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField id="campos" fx:id="usuario" onKeyTyped="#comprobarValidezUsuario" prefHeight="33.0" prefWidth="400.0" styleClass="campos" stylesheets="@plantillaejercicio.css">
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                     <tooltip>
+                        <Tooltip fx:id="hintUsuario" text="Debe tener entre 6 y 15 caracteres. Puede contener mayúsculas y minúsculas, &quot;-&quot; y &quot;_&quot;.." wrapText="true" />
+                     </tooltip>
+                  </TextField>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label styleClass="letras" text="Correo electrónico *">
+                           <VBox.margin>
+                              <Insets left="100.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField id="campos" fx:id="correo" onKeyTyped="#comprobarValidezCorreo" prefHeight="33.0" prefWidth="400.0" promptText="usuario@dominio.com" styleClass="campos" stylesheets="@plantillaejercicio.css">
+                           <VBox.margin>
+                              <Insets left="100.0" right="100.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label styleClass="letras" text="Contraseña *">
+                     <VBox.margin>
+                        <Insets left="100.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <PasswordField id="campos" fx:id="contrasena" onKeyTyped="#comprobarValidezContraseña" prefHeight="33.0" prefWidth="400.0" styleClass="campos" stylesheets="@plantillaejercicio.css">
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                     <tooltip>
+                        <Tooltip fx:id="hintContraseña" text="Debe contener entre 8 y 20 caracteres. Contiene al menos una letra mayúscula. Contiene al menos una letra minúscula. Contiene al menos un número. Contiene un caracter especial (!@#$%&amp;*()-+=). No contiene ningún espacio en blanco." textOverrun="CLIP" wrapText="true" />
+                     </tooltip>
+                  </PasswordField>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label styleClass="letras" text="Confirmar contraseña *">
+                           <VBox.margin>
+                              <Insets left="100.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <PasswordField id="campos" fx:id="contrasena2" onKeyTyped="#comprobarValidezConfirmar" prefHeight="33.0" prefWidth="400.0" styleClass="campos" stylesheets="@plantillaejercicio.css">
+                           <VBox.margin>
+                              <Insets left="100.0" right="100.0" />
+                           </VBox.margin>
+                           <tooltip>
+                              <Tooltip fx:id="hintConfirmar" text="Debe coincidir con la contraseña." />
+                           </tooltip>
+                        </PasswordField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label styleClass="letras" text="Fecha de nacimiento *">
+                           <VBox.margin>
+                              <Insets left="100.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="fecha" prefHeight="33.0" prefWidth="400.0" stylesheets="@plantillaejercicio.css">
+                           <VBox.margin>
+                              <Insets left="100.0" right="100.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="date-picker" />
+                              <String fx:value="botones" />
+                           </styleClass>
+                        </DatePicker>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label styleClass="letras" text="Avatar">
+                           <VBox.margin>
+                              <Insets left="100.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="Es opcional seleccionar un avatar ahora." />
+                           </tooltip>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox>
+                           <VBox.margin>
+                              <Insets left="100.0" right="100.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="imagen" fitHeight="150.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true" />
+                              <VBox>
+                                 <children>
+                                    <Label prefHeight="76.0" prefWidth="234.0" text="Puede seleccionar un avatar más tarde, usar el predeterminado, o elegir ahora otro." textAlignment="CENTER" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="avatarBT1" layoutX="29.0" layoutY="10.0" mnemonicParsing="false" onAction="#elegirAvatar" styleClass="botones" text="Seleccionar Avatar" textAlignment="CENTER" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="599.0">
+               <children>
+                  <Button fx:id="crearBT" alignment="CENTER" mnemonicParsing="false" onAction="#crearAC" prefHeight="36.0" prefWidth="113.0" styleClass="botones" text="Crear">
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="140.0" prefWidth="599.0">
+               <children>
+                  <Label fx:id="error" contentDisplay="CENTER" lineSpacing="2.0" minHeight="-Infinity" prefHeight="119.0" prefWidth="398.0" textAlignment="JUSTIFY" textFill="#f70000" textOverrun="CLIP" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
